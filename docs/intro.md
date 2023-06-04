@@ -4,44 +4,18 @@ sidebar_position: 1
 
 # 概述
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**CuteChatConnect** 是一个可爱的即时通讯传输协议
 
-## Getting Started
+下文将以 **C³** 作为 **CuteChatConnect** 的简称。
 
-Get started by **creating a new site**.
+## 组成部分
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+一个最简单的应用由两部分构成 **适配器** 和 **客户端**
 
-### What you'll need
+### 适配器
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+**适配器** 的作用是将平台特异API转换为 **C³** 通讯协议。 除了标注为 *（可选）* 的部分， **适配器** 必须支持所有 [**通讯方式**](./connection#通讯方式) 并能正确处理所有 [**请求**](./requests/)
 
-## Generate a new site
+### 客户端
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+**客户端** 通过于 **适配器** 使用 **C³** 进行通讯，即可操作 **适配器** 背后的特定平台，而无须关心平台具体的API。除了标注为 *（可选）* 的功能， **客户端** 至少支持一种 [**通讯方式**](./connection#通讯方式) 并能按需处理 [**事件**](./events/intro) 。

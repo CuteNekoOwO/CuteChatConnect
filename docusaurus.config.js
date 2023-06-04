@@ -64,7 +64,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Untitled Protocol',
+        title: 'CuteChatConnect',
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
@@ -78,7 +78,7 @@ const config = {
           },
           {to: '/blog', label: '最新动态', position: 'left'},
           {
-            href: 'https://github.com/CuteNekoOwO/UntitledProtocol/',
+            href: 'https://github.com/CuteNekoOwO/CuteChatConnect/',
             label: 'GitHub',
             position: 'right',
           },
@@ -122,7 +122,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/CuteNekoOwO/UntitledProtocol/',
+                href: 'https://github.com/CuteNekoOwO/CuteChatConnect/',
               },
             ],
           },
