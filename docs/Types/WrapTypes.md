@@ -8,12 +8,12 @@ sidebar_position: 1
 
 一个基本的包装类型所需字段如表格所示
 
-| 字段名称 | 数据类型 |
-| -------- | -------- |
-|   Type   | [见下文] |
-|  Action  |  String  |
-|    ID    |  Number? |
-|   Date   |  Object? |
+| 字段名称 | 数据类型 |   描述   |
+| -------- | -------- | -------- |
+|   Type   | [见下文] | 包装类型 |
+|  Action  |  String  |   动作   |
+|    ID    |  Number? |  请求ID  |
+|   Date   |  Object? |   数据   |
 
 ##  事件包装类型
 
@@ -29,4 +29,18 @@ sidebar_position: 1
 
 ## 错误包装类型
 
-该包装类型的 **Type** 字段的值始终为 `"Error"` ， **Action** 和 **ID** 由该响应对应的请求决定， **Date** 为一个 [**错误类型**](./error-types) 对象。
+该包装类型的 **Type** 字段的值始终为 `"Error"` ， **Action** 和 **ID** 由该响应对应的请求决定， **Date** 为一个 [**错误类型**](./ErrorTypes) 对象。
+
+例如，当发生 [ActionNotFound](./ErrorTypes#actionnotfound) 错误时，客户端将会收到这样的数据：
+
+```JSON
+{
+    "Type": "Error",
+    "Action": "SomeActionHere",
+    "ID": 1234,
+    "Data": {
+        "Error": "ActionNotFound",
+        "Discription": "Action不存在"
+    }
+}
+```
