@@ -12,11 +12,15 @@ sidebar_position: 2
 
 ## 请求
 
-Data为消息类型组成的数组，可包含以下元素中的一个或多个。
+Data为消息来源组成的数组，可包含以下元素中的一个或多个。
 
 - "System"
 - "Private"
+- "Private:{ID}"
 - "Group"
+- "Group:{ID}"
+
+其中`{ID}`可以为用户ID或群组ID，可用于仅订阅特定用户或群组的消息。
 
 多次请求后**仅最后一次**的订阅请求生效。不支持的消息类型将会被**忽略**。
 
@@ -32,7 +36,7 @@ Data中包含成功订阅的消息类型。该请求永远**不应产生错误**
     "Type": "Request",
     "Action": "Subscribe",
     "ID": 1234,
-    "Data": ["System", "Private", "Group"]
+    "Data": ["System", "Private", "Group:12345"]
 }
 ```
 
@@ -42,7 +46,7 @@ Data中包含成功订阅的消息类型。该请求永远**不应产生错误**
     "Type": "Respond",
     "Action": "Subscribe",
     "ID": 1234,
-    "Data": ["System", "Private", "Group"]
+    "Data": ["System", "Private", "Group:12345"]
 }
 ```
 
