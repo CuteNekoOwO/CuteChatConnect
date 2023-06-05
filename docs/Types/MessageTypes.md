@@ -15,6 +15,7 @@ sidebar_position: 4
 | From      |  [User](./CommonTypes#user) | 发送消息的用户 |
 | Chat      |  [Chat](./CommonTypes#chat) | 消息所属会话 |
 | Reply     |  Number? | 被回复的消息ID。不回复则无此字段。 |
+| Content   |  [Segment](#segment) | 消息内容 |
 
 
 ## Segment
