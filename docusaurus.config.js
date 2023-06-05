@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://cuteneko.eu.org/CuteChatConnect/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/CuteChatConnect/',
@@ -42,7 +42,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/CuteNekoOwO/CuteChatConnect/',
+            'https://github.com/CuteNekoOwO/CuteChatConnect/tree/main/',
         },
         blog: {
           showReadingTime: true,
